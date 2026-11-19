@@ -1,0 +1,46 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #0b0e1a; }
+body { font-family: "Segoe UI", Arial, sans-serif; color: #f2ead8; }
+#gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+.hidden { display: none !important; }
+
+/* ---------- HUD ---------- */
+#hud { position: fixed; inset: 0; pointer-events: none; z-index: 5; }
+#minimap-wrap { position: absolute; left: 18px; bottom: 18px; width: 216px; height: 216px; }
+#minimap { width: 216px; height: 216px; border-radius: 50%; border: 3px solid rgba(10,10,16,.85); box-shadow: 0 0 0 2px rgba(232,182,76,.55), 0 6px 24px rgba(0,0,0,.5); background: #10131f; }
+#wanted { position: absolute; top: -14px; right: -6px; font-size: 24px; letter-spacing: 2px; color: #ffd34d; text-shadow: 0 0 6px rgba(0,0,0,.9), 0 2px 2px #000; }
+#wanted .off { color: rgba(255,255,255,.18); text-shadow: none; }
+#stats { position: absolute; right: 20px; bottom: 18px; text-align: right; }
+#cash { font-size: 30px; font-weight: 700; color: #7dd87d; text-shadow: 0 2px 4px #000; letter-spacing: 1px; }
+#healthbar { width: 190px; height: 12px; margin: 6px 0 4px auto; background: rgba(0,0,0,.55); border: 1px solid rgba(255,255,255,.35); }
+#healthfill { height: 100%; width: 100%; background: linear-gradient(90deg, #d84a4a, #e88a4a); transition: width .15s; }
+#weapon { font-size: 15px; color: #e8e2d2; text-shadow: 0 1px 3px #000; letter-spacing: 1px; }
+#mission { position: absolute; top: 18px; left: 18px; max-width: 380px; background: rgba(8,10,18,.66); border-left: 4px solid #e8b64c; padding: 10px 14px; }
+#mission-title { font-size: 13px; letter-spacing: 3px; color: #e8b64c; font-weight: 700; }
+#mission-text { font-size: 17px; margin-top: 3px; line-height: 1.3; }
+#mission-dist { font-size: 13px; color: #9fd89f; margin-top: 2px; }
+#dialogue { position: absolute; left: 50%; bottom: 110px; transform: translateX(-50%); width: min(680px, 86vw); background: rgba(6,8,14,.82); border: 1px solid rgba(232,182,76,.5); padding: 14px 18px 10px; pointer-events: none; }
+#dlg-name { color: #e8b64c; font-weight: 700; letter-spacing: 2px; font-size: 13px; }
+#dlg-text { font-size: 19px; line-height: 1.4; margin-top: 4px; }
+#dlg-hint { font-size: 11px; color: #8f8a7a; margin-top: 6px; text-align: right; letter-spacing: 1px; }
+#toast { position: absolute; top: 84px; left: 50%; transform: translateX(-50%); background: rgba(6,8,14,.8); border: 1px solid rgba(255,255,255,.25); padding: 8px 18px; font-size: 17px; letter-spacing: 1px; }
+#prompt { position: absolute; left: 50%; bottom: 240px; transform: translateX(-50%); background: rgba(6,8,14,.75); padding: 6px 14px; font-size: 15px; border-radius: 3px; }
+#banner { position: absolute; top: 34%; left: 0; right: 0; text-align: center; font-size: 54px; font-weight: 800; letter-spacing: 6px; color: #ffd34d; text-shadow: 0 0 22px rgba(232,182,76,.45), 0 4px 6px #000; }
+#banner.red { color: #ff5a4d; text-shadow: 0 0 22px rgba(255,60,40,.5), 0 4px 6px #000; }
+#crosshair { position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: rgba(255,255,255,.9); box-shadow: 0 0 4px #000; }
+
+/* ---------- Menus ---------- */
+#menu, #pause, #endcard { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse at 50% 120%, rgba(255,93,162,.20), transparent 60%), linear-gradient(180deg, rgba(5,6,12,.25), rgba(5,6,12,.78)); }
+.menu-inner { text-align: center; padding: 30px 40px; }
+.logo { font-size: 84px; font-weight: 900; letter-spacing: 4px; color: #f2ead8; text-shadow: 0 0 30px rgba(57,194,215,.5), 0 6px 0 rgba(0,0,0,.35); line-height: .95; }
+.logo span { color: #ff5da2; text-shadow: 0 0 30px rgba(255,93,162,.65), 0 6px 0 rgba(0,0,0,.35); }
+.logo.small { font-size: 52px; }
+.tagline { margin-top: 10px; font-size: 18px; letter-spacing: 3px; color: #b9c4d6; }
+#menu-buttons { margin: 34px 0 22px; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+#menu-buttons button { pointer-events: auto; cursor: pointer; width: 300px; padding: 13px 0; font-size: 19px; font-weight: 700; letter-spacing: 3px; color: #101018; background: linear-gradient(180deg, #ffd34d, #e8a33d); border: 0; border-radius: 3px; box-shadow: 0 4px 0 #8a5f1d, 0 8px 18px rgba(0,0,0,.5); }
+#menu-buttons button:hover { filter: brightness(1.08); }
+#menu-buttons button:active { transform: translateY(2px); box-shadow: 0 2px 0 #8a5f1d; }
+.controls { font-size: 14.5px; color: #cfd6e4; line-height: 1.7; }
+.controls b { color: #ffd34d; }
+.foot { margin-top: 16px; font-size: 13px; color: #7e8698; letter-spacing: 1px; }
+#save-note { font-size: 14px; color: #9fd89f; }

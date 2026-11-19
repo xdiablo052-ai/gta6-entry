@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Harbor — an open-world crime story</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+
+<div id="hud" class="hidden">
+  <div id="minimap-wrap">
+    <canvas id="minimap" width="216" height="216"></canvas>
+    <div id="wanted" title="Wanted level"></div>
+  </div>
+  <div id="stats">
+    <div id="cash">$0</div>
+    <div id="healthbar"><div id="healthfill"></div></div>
+    <div id="weapon"></div>
+  </div>
+  <div id="mission" class="hidden">
+    <div id="mission-title"></div>
+    <div id="mission-text"></div>
+    <div id="mission-dist"></div>
+  </div>
+  <div id="dialogue" class="hidden">
+    <div id="dlg-name"></div>
+    <div id="dlg-text"></div>
+    <div id="dlg-hint">click / Space — continue</div>
+  </div>
+  <div id="toast" class="hidden"></div>
+  <div id="prompt" class="hidden"></div>
+  <div id="banner" class="hidden"></div>
+  <div id="crosshair" class="hidden"></div>
+</div>
+
+<div id="menu">
+  <div class="menu-inner">
+    <div class="logo">NEON<span>HARBOR</span></div>
+    <div class="tagline">Viceport City · a small-time story</div>
+    <div id="menu-buttons">
+      <button id="btn-new">NEW STORY</button>
+      <button id="btn-continue" class="hidden">CONTINUE</button>
+      <button id="btn-free">FREE ROAM</button>
+    </div>
+    <div class="controls">
+      <b>WASD</b> move / drive &nbsp; <b>Mouse</b> camera &nbsp; <b>Shift</b> sprint &nbsp; <b>F</b> enter / exit car
+      &nbsp; <b>Click</b> shoot &nbsp; <b>E</b> talk / interact &nbsp; <b>P</b> pause &nbsp; <b>M</b> mute
+    </div>
+    <div class="foot">An original open-world crime game. Every car can be stolen. Every star can be earned.</div>
+  </div>
+</div>
+
+<div id="pause" class="hidden">
+  <div class="menu-inner">
+    <div class="logo small">PAUSED</div>
+    <div id="menu-buttons">
+      <button id="btn-resume">RESUME</button>
+      <button id="btn-restart">RESTART MISSION</button>
+      <button id="btn-quit">QUIT TO MENU</button>
+    </div>
+    <div id="save-note"></div>
+  </div>
+</div>
+
+<div id="endcard" class="hidden">
+  <div class="menu-inner">
+    <div id="end-title" class="logo small">BUSTED</div>
+    <div id="end-text" class="tagline"></div>
+    <div id="menu-buttons"><button id="btn-again">BACK ON THE STREET</button></div>
+  </div>
+</div>
+
+<script type="importmap">
+{ "imports": { "three": "./vendor/three/three.module.min.js", "three/addons/": "./vendor/three/" } }
+</script>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
