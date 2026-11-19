@@ -10,6 +10,10 @@ export function loadSave() {
   } catch { return null; }
 }
 
+export function hasSave() {
+  try { return localStorage.getItem(KEY) !== null; } catch { return false; }
+}
+
 export function writeSave(data) {
   try { localStorage.setItem(KEY, JSON.stringify(data)); } catch { /* private mode: play unsaved */ }
 }

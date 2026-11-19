@@ -4,7 +4,7 @@ export const keys = {};
 export const pressed = {};
 export const mouse = { dx: 0, dy: 0, down: false, clicked: false };
 
-const GAME_KEYS = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyE', 'KeyP', 'KeyM', 'Space', 'ShiftLeft', 'ShiftRight', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']);
+const GAME_KEYS = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyE', 'KeyP', 'KeyM', 'Space', 'Enter', 'ShiftLeft', 'ShiftRight', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']);
 
 export function initInput(canvas) {
   addEventListener('keydown', (e) => {

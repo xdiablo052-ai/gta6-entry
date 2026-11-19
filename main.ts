@@ -7,6 +7,7 @@
 // Outside the grader, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 // Serve the game locally with: node serve.ts  (then open http://localhost:8080)
+// Node 22 runs this .ts file as-is: no flags, no build step, no install.
 
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

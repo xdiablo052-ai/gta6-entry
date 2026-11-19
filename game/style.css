@@ -5,7 +5,7 @@ body { font-family: "Segoe UI", Arial, sans-serif; color: #f2ead8; }
 .hidden { display: none !important; }
 
 /* ---------- HUD ---------- */
-#hud { position: fixed; inset: 0; pointer-events: none; z-index: 5; }
+#hud { position: fixed; inset: 0; pointer-events: none; z-index: 5; user-select: none; -webkit-user-select: none; }
 #minimap-wrap { position: absolute; left: 18px; bottom: 18px; width: 216px; height: 216px; }
 #minimap { width: 216px; height: 216px; border-radius: 50%; border: 3px solid rgba(10,10,16,.85); box-shadow: 0 0 0 2px rgba(232,182,76,.55), 0 6px 24px rgba(0,0,0,.5); background: #10131f; }
 #wanted { position: absolute; top: -14px; right: -6px; font-size: 24px; letter-spacing: 2px; color: #ffd34d; text-shadow: 0 0 6px rgba(0,0,0,.9), 0 2px 2px #000; }

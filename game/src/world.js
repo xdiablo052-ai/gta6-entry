@@ -10,7 +10,7 @@ export function createWorld(canvas) {
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.12;
+  renderer.toneMappingExposure = 1.15;
 
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x2a2340);
@@ -38,7 +38,7 @@ export function createWorld(canvas) {
   sun.shadow.camera.far = 1200;
   sun.shadow.bias = -0.0004;
   scene.add(sun);
-  scene.add(new THREE.HemisphereLight(0x8a7bb8, 0x1c2438, 0.85));
+  scene.add(new THREE.HemisphereLight(0x8a7bb8, 0x1c2438, 1.0));
   const fill = new THREE.DirectionalLight(0x5a76c8, 0.5);
   fill.position.set(200, 120, -260);
   scene.add(fill);

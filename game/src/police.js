@@ -5,7 +5,7 @@ import { makeCar, placeCar, spinWheels } from './cars.js';
 import { LINES, CITY_EDGE, collideCircle } from './city.js';
 
 const CRIME_STARS = { steal: 1, ram: 1, hitPed: 2, shot: 1, shootPed: 2, missionHeat: 1 };
-const CRIME_COOLDOWN = { steal: 2, ram: 1.4, hitPed: 1, shot: 0.9, shootPed: 1, missionHeat: 5 };
+const CRIME_COOLDOWN = { steal: 2, ram: 1.2, hitPed: 1, shot: 0.9, shootPed: 1, missionHeat: 5 };
 
 export function createPolice(scene, cars, hooks) {
   const cops = [];

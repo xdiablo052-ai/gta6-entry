@@ -4,7 +4,7 @@
 import * as THREE from 'three';
 import { LINES, ROAD_HALF, CITY_EDGE, collideCircle } from './city.js';
 
-const PAINTS = [0xc23b2e, 0x2e6ac2, 0xe8b64c, 0x3fae6a, 0xe8e4da, 0x8a4ac2, 0x22242c, 0xc26a2e, 0x4ac2b0, 0xd84a7a];
+const PAINTS = [0xc23b2e, 0x2e6ac2, 0xe8b64c, 0x3fae6a, 0xe8e4da, 0x8a4ac2, 0x22242c, 0xc26a2e, 0x4ac2b0, 0xd84a7a, 0x9fb4c2];
 let nextId = 1;
 
 export function makeCar(scene, opts = {}) {

@@ -4,7 +4,7 @@
 import * as THREE from 'three';
 import { LINES, ROAD_HALF, CITY_EDGE, collideCircle } from './city.js';
 
-const SHIRTS = [0xe8e4da, 0x39c2d7, 0x7dd87d, 0xffd34d, 0xc26a2e, 0x8a4ac2, 0xd84a7a, 0x4a6a8a];
+const SHIRTS = [0xe8e4da, 0x39c2d7, 0x7dd87d, 0xffd34d, 0xc26a2e, 0x8a4ac2, 0xd84a7a, 0x4a6a8a, 0xf2f2f2];
 const PANTS = [0x2c3444, 0x4a3a2c, 0x22242c, 0x5a4a5e];
 const WALK = ROAD_HALF + 2.6; // sidewalk offset from a road centre line
 

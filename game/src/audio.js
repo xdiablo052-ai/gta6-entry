@@ -110,7 +110,7 @@ function startMusic() {
         o.type = 'triangle'; o.frequency.value = f;
         const t = ctx.currentTime;
         g.gain.setValueAtTime(0, t);
-        g.gain.linearRampToValueAtTime(0.028, t + 0.4);
+        g.gain.linearRampToValueAtTime(0.032, t + 0.4);
         g.gain.linearRampToValueAtTime(0.0001, t + 3.4);
         o.connect(g); g.connect(master);
         o.start(t); o.stop(t + 3.5);

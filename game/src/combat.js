@@ -39,7 +39,7 @@ export function createCombat(scene, hooks) {
     const geo = new THREE.BufferGeometry().setFromPoints([origin.clone().addScaledVector(dir, 1.2), end]);
     const line = new THREE.Line(geo, tracerMat.clone());
     scene.add(line);
-    tracers.push({ line, life: 0.06 });
+    tracers.push({ line, life: 0.075 });
     sfx.shot();
     hooks.police.reportCrime('shot');
     scarePeds(state.peds, state.player.pos, 30);
@@ -58,7 +58,7 @@ export function createCombat(scene, hooks) {
       cooldown -= dt;
       for (let i = tracers.length - 1; i >= 0; i--) {
         tracers[i].life -= dt;
-        tracers[i].line.material.opacity = Math.max(0, tracers[i].life / 0.06) * 0.9;
+        tracers[i].line.material.opacity = Math.max(0, tracers[i].life / 0.075) * 0.9;
         if (tracers[i].life <= 0) { scene.remove(tracers[i].line); tracers.splice(i, 1); }
       }
       if (wantFire && cooldown <= 0 && !state.player.inCar) {

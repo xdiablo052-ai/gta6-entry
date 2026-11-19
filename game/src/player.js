@@ -48,6 +48,7 @@ export function updatePlayer(p, dt, move, colliders) {
   p.speedNow = mag > 0.05 ? speed : 0;
   collideCircle(p.pos, 0.55, colliders);
   p.mesh.position.copy(p.pos);
+  p.mesh.position.y = mag > 0.05 ? Math.abs(Math.sin(p.walkPhase)) * 0.045 : 0; // a little stride bob
   p.mesh.rotation.y = p.heading;
   const swing = Math.sin(p.walkPhase) * (mag > 0.05 ? 0.55 : 0);
   p.limbs.legL.rotation.x = swing; p.limbs.legR.rotation.x = -swing;

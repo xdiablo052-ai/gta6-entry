@@ -43,7 +43,7 @@ function signTexture(text, color) {
 
 const FACADE_BASES = ['#3a3f52', '#4a3a48', '#2f4256', '#54453a', '#3d3150', '#2c3a3a'];
 const NEON = ['#ff5da2', '#39c2d7', '#ffd34d', '#7dd87d', '#ff8a4a'];
-const SIGNS = ['HOTEL SOL', 'BAR LUNA', 'CLUB NOVA', 'DINER 24H', 'VICE GYM', 'PAWN ★', 'HOTEL SOL', 'BAR LUNA', 'NOODLE+', 'CINEMA'];
+const SIGNS = ['HOTEL SOL', 'BAR LUNA', 'CLUB NOVA', 'DINER 24H', 'VICE GYM', 'PAWN ★', 'HOTEL SOL', 'BAR LUNA', 'NOODLE+', 'CINEMA', 'LIQUOR'];
 
 export function buildCity(scene) {
   const colliders = []; // {minX, maxX, minZ, maxZ}

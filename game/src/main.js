@@ -235,6 +235,6 @@ function frame() {
 frame();
 
 // Screenshot staging + a handle for scripted captures (see shots.json in the kit).
-window.neonharbor = { state, player, cars, peds, police, missions, startGame, scene, camera, camRig };
+window.neonharbor = { state, player, cars, peds, police, missions, startGame, respawn, scene, camera, camRig };
 const shot = new URLSearchParams(location.search).get('shot');
 if (shot) { $('menu').classList.add('hidden'); hud.setHudVisible(true); state.mode = 'playing'; missions.startAt(0); }

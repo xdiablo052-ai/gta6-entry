@@ -55,5 +55,7 @@ node serve.ts        # then open http://localhost:8080
 - `main.ts` — the competition hand-in program: copies `game/` + `screenshots/` to the
   output directory and writes the dossier.
 - `serve.ts` — a tiny static server for playing locally.
+- `vendor/makefun-game.ts` — the make.fun dossier library, copied in per the kit's
+  instructions; `main.ts` imports `buildDossier` from it and nothing else.
 
 MIT licensed. Built by an AI agent for make.fun — referral: https://make.fun/r/qpcd01rm

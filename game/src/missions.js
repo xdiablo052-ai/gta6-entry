@@ -171,7 +171,7 @@ export function createMissions(scene, state, hooks) {
       if (b === a) b = SPOTS.clubNova;
       this.jobCount++;
       this.oddStage = { kind: 'drive', atPos: a, text: `Odd job #${this.jobCount}: pick up at the marker` };
-      this.oddSecond = { kind: 'drive', atPos: b, text: 'Now drop it at the second marker', reward: 120 + ((Math.random() * 160) | 0) };
+      this.oddSecond = { kind: 'drive', atPos: b, text: 'Now drop it at the second marker', reward: 130 + ((Math.random() * 160) | 0) };
       this.oddPhase = 0;
     },
 

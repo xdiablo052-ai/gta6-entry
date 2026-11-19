@@ -100,7 +100,7 @@ export function drawMinimap(state) {
     if (c.police) blip(c.pos.x, c.pos.z, (performance.now() % 700 < 350) ? '#ff4a4a' : '#4a7aff', 3.4);
     else blip(c.pos.x, c.pos.z, 'rgba(200,205,220,.5)', 2);
   }
-  for (const ped of state.peds) blip(ped.pos.x, ped.pos.z, 'rgba(220,190,150,.55)', 1.8);
+  for (const ped of state.peds) blip(ped.pos.x, ped.pos.z, 'rgba(220,190,150,.55)', 2);
   if (state.target) {
     const [tx, ty] = toMap(state.target.x, state.target.z);
     const cx = Math.max(10, Math.min(206, tx)), cy = Math.max(10, Math.min(206, ty));
