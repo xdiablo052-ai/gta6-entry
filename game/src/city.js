@@ -53,10 +53,29 @@ export function buildCity(scene) {
   // Ground slab + sidewalks tint, then water.
   const ground = new THREE.Mesh(
     new THREE.PlaneGeometry(CITY_EDGE * 2 + 90, CITY_EDGE * 2 + 90),
-    new THREE.MeshStandardMaterial({ color: 0x565a52, roughness: 1 }),
+    new THREE.MeshStandardMaterial({ color: 0x43464a, roughness: 1 }),
   );
   ground.rotation.x = -Math.PI / 2; ground.position.y = -0.05; ground.receiveShadow = true;
   group.add(ground);
+
+  // Pavement pads under every block and a boardwalk band along the harbor, so the city
+  // reads as built ground instead of one flat slab.
+  const padMat = new THREE.MeshStandardMaterial({ color: 0x5d6066, roughness: 1 });
+  for (let i = 0; i < LINES.length - 1; i++) for (let j = 0; j < LINES.length - 1; j++) {
+    const pad = new THREE.Mesh(new THREE.PlaneGeometry(PITCH - ROAD_HALF * 2 + 6, PITCH - ROAD_HALF * 2 + 6), padMat);
+    pad.rotation.x = -Math.PI / 2;
+    pad.position.set((LINES[i] + LINES[i + 1]) / 2, 0.005, (LINES[j] + LINES[j + 1]) / 2);
+    pad.receiveShadow = true;
+    group.add(pad);
+  }
+  const walk = new THREE.Mesh(
+    new THREE.PlaneGeometry(CITY_EDGE * 2 + 90, HARBOR_Z - CITY_EDGE - 4),
+    new THREE.MeshStandardMaterial({ color: 0x77664e, roughness: 1 }),
+  );
+  walk.rotation.x = -Math.PI / 2;
+  walk.position.set(0, 0.005, (CITY_EDGE + HARBOR_Z) / 2 + 2);
+  walk.receiveShadow = true;
+  group.add(walk);
 
   const water = new THREE.Mesh(
     new THREE.PlaneGeometry(2600, 1500),

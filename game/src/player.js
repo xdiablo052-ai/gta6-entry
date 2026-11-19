@@ -59,7 +59,8 @@ export function updatePlayer(p, dt, move, colliders) {
 
 // Third-person camera: yaw/pitch orbit around a target, smoothed, with a wider and
 // higher stance when driving.
-export const camRig = { yaw: Math.PI, pitch: 0.32, dist: 8.5 };
+// Yaw starts looking west across the promenade: sunset light on the skyline's faces.
+export const camRig = { yaw: Math.PI * 0.5, pitch: 0.32, dist: 8.5 };
 export function updateCamera(camera, target, dt, driving) {
   const wantDist = driving ? 11.5 : 7.5;
   camRig.dist += (wantDist - camRig.dist) * Math.min(1, dt * 3);
